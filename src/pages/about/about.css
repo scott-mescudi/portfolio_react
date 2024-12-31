@@ -1,0 +1,25 @@
+.fade-in {
+    animation: fadeIn 2s ease-out;
+}
+
+/* #car:hover{
+    animation: drive 2s linear infinite;
+}
+
+@keyframes drive {
+0% {
+    transform: translateX(0);
+}
+100% {
+    transform: translateX(150%);
+}
+} */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.4;
+    }
+}
