@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const DefaultItems = [
     {name: "Home", Path: "/"},
     {name: "About", Path: "/about"},
-    {name: "Github", Path: "https://github.com/scott-mescudi"},
+    {name: "Projects", Path: "/projects"},
 ]
 
 
@@ -58,7 +58,7 @@ export function NavBar({NavItems}) {
 
     const GetLogo = () => {
         let i = getRandomNumber(1, 13);
-        let newLogoPath = `logos/logo${i}.svg`;
+        let newLogoPath = `/logos/logo${i}.svg`; 
 
         if (logoPath !== newLogoPath) {
             SetLogoPath(newLogoPath);
