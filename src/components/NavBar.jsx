@@ -99,7 +99,7 @@ export function NavBar({NavItems}) {
 
             <ul className="flex items-center  flex-row gap-3 ml-5 overflow-auto" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
                 {NavItems.map((item, idx) => (
-                    <li className={`${enter ? "opacity-50" : evalpath(currPath, item.name)} hover:opacity-90 duration-300 ease-in-out hover:bg-neutral-800 hover:px-2 hover:rounded-xl`} key={idx}>
+                    <li className={`${enter ? "opacity-50" : evalpath(currPath, item.name)} hover:opacity-90 duration-200 ease-in-out hover:bg-neutral-800 hover:px-1 hover:rounded-xl`} key={idx}>
                         <a href={item.Path}>{item.name}</a>
                     </li>
                 ))}
