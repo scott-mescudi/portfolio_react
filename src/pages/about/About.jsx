@@ -6,7 +6,7 @@ export function About() {
     return (
         <>  
             <div id="about" className="w-full fade-in text-white overflow-hidden sm:flex hidden my-8 text-2xl flex-col items-center opacity-40 gap-5">
-                <h1 className="w-6/12 text-center  font-semibold sm:text-4xl">BACKGROUND</h1>
+                <h1 className="w-6/12 text-center font-semibold sm:text-4xl">BACKGROUND</h1>
                 <p className="w-6/12 text-whitel">
                 Hey! Ik ben een 17-jarige uit Suriname met een passie voor programmeren, 
                 trading en gaming. Wat mij drijft, 
