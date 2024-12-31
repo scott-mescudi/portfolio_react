@@ -2,27 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    overflow: scroll; /* Keeps both scrollbars visible */
-}
-
-/* Style for the scrollbar */
-body::-webkit-scrollbar {
-    width: 0.5em; /* Adjust the width of the scrollbar */
-    height: 0.5em; /* Adjust the height for the horizontal scrollbar */
-}
-
-/* Style for the scrollbar track */
-body::-webkit-scrollbar-track {
-    background: #1a1a1a; /* Dark track color */
-}
-
-/* Style for the scrollbar thumb */
-body::-webkit-scrollbar-thumb {
-    background-color: #333; /* Dark thumb color */
-    border-radius: 10px; /* Optional: Rounded corners for the thumb */
-}
-
-body::-webkit-scrollbar:horizontal {
-    display: none;
-}

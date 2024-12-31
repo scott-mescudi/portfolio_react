@@ -33,7 +33,7 @@ export function About() {
             </div>
 
 
-            <div id="boxes" className="w-full h-[80dvh] flex gap-5 flex-col items-center">
+            <div id="boxes" className="w-full h-full lg:h-screen flex gap-5 flex-col items-center">
                 <div className="w-6/12 h-1/2 mt-5  bg-neutral-950 flex flex-col p-5 rounded-xl">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Cars</h1>
                         <p className="w-full text-white text-opacity-45">Ik hou van tunen en werken aan auto's.</p>
@@ -46,7 +46,7 @@ export function About() {
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Photography</h1>
                         <p className="w-full text-white text-opacity-45">Een van me recente hobbies.</p>
                         <div className="w-full h-full p-5 flex justify-center items-center ">
-                            <img decoding="async" loading="lazy" src="go.gif" className="rounded-md hover:scale-110 duration-500" /> {/* 'fume' remove this for photos from camera with a filter or sum to make it dark */}
+                            <img decoding="async" loading="lazy" src="go.gif" className="rounded-md py-1 hover:scale-110 duration-500" /> {/* 'fume' remove this for photos from camera with a filter or sum to make it dark */}
                         </div> 
                     </div>
                     <div className="w-full h-full p-5 bg-neutral-950 flex flex-col rounded-xl items-center">

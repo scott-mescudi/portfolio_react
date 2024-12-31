@@ -97,16 +97,16 @@ export function NavBar({NavItems}) {
                 <img className="h-full w-full" src={logoPath} alt="logo" />
             </div>
 
-            <ul className="flex items-center  flex-row gap-3 ml-5 overflow-auto" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
+            <ul className="flex items-center flex-row  ml-5 overflow-none" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
                 {NavItems.map((item, idx) => (
-                    <li className={`${enter ? "opacity-50" : evalpath(currPath, item.name)} hover:opacity-90 duration-200 ease-in-out hover:bg-neutral-800 hover:px-1 hover:rounded-xl`} key={idx}>
+                    <li className={`${enter ? "opacity-50" : evalpath(currPath, item.name)} hover:opacity-90 duration-200 ease-in-out bg-neutral-800 px-2 bg-opacity-0 hover:bg-opacity-80 rounded-xl`} key={idx}>
                         <a href={item.Path}>{item.name}</a>
                     </li>
                 ))}
             </ul>
 
-            <div className="ml-auto opacity-50 lg:flex flex-row gap-5 group text-nowrap">
-            <p>{date}</p>
+            <div className="ml-auto opacity-50 sm:flex hidden flex-row gap-5 group text-nowrap">
+            <p className="md:flex hidden">{date}</p>
             <p>{time}</p>
             </div>
 

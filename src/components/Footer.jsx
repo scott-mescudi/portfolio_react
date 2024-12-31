@@ -1,7 +1,7 @@
 export function Footer() {
     return (
         <>
-            <footer id="footer" className="h-1/12 w-6/12 rounded-t-2xl overflow-hidden justify-center dark:bg-neutral-950  bg-slate-300 md:flex hidden gap-2  bottom-0 flex-row sm:px-8 py-5">
+            <footer id="footer" className="h-full w-6/12 rounded-t-2xl justify-center dark:bg-neutral-950 bg-slate-300 flex gap-2 flex-row sm:px-8 py-5">
             <ul className="font-mono sm:flex sm:flex-col hidden dark:text-white opacity-50 ">
                 <li>Anish Chhitu</li>
                 <li>Suriname</li>
