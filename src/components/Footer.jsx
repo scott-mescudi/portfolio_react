@@ -2,13 +2,13 @@ export function Footer() {
     return (
         <>
             <footer id="footer" className="h-full w-6/12 rounded-t-2xl justify-center dark:bg-neutral-950 bg-slate-300 flex gap-2 flex-row sm:px-8 py-5">
-            <ul className="font-mono sm:flex sm:flex-col hidden dark:text-white opacity-50 ">
+            <ul className="font-mono md:flex sm:flex-col hidden dark:text-white opacity-50 ">
                 <li>Anish Chhitu</li>
                 <li>Suriname</li>
                 <li>2007</li>
             </ul>
 
-             <div className="h-1/12 sm:flex w-0.5 sm:ml-7 hidden opacity-40 rounded-md dark:bg-white"></div>
+             <div className="h-1/12 md:flex w-0.5 sm:ml-7 hidden opacity-40 rounded-md dark:bg-white"></div>
 
             <ul className="font-mono w-[80px] ml-3 dark:text-white ">
                 <li className="opacity-90 ">Links:</li>

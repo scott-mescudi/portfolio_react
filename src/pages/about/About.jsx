@@ -23,6 +23,15 @@ export function About() {
                 Om dat te bereiken, werk ik aan mijn vaardigheden en verdiep ik me in de nieuwste backend-technieken. 
                 Deze opleiding brengt me dichter bij mijn doel.
                 </p>
+
+                {/* <p className="w-6/12 text-white">
+                Hello! I’m a passionate programmer from Suriname with a strong interest in backend development, technology, and problem-solving. My journey into programming began with a curiosity about how systems work and has grown into a commitment to mastering cutting-edge backend techniques. I take pride in my perseverance and the drive to achieve my goals, no matter the challenges.
+                </p>
+
+                <p className="w-6/12 text-white">
+                I thrive on building efficient and powerful systems that make a real impact. My focus lies in constantly improving my skills and staying ahead with the latest developments in the tech industry. My long-term ambition is to establish my own tech company, where I can bring innovative ideas to life. Every step I take now is aimed at turning this vision into reality. Let's create the future together.
+                </p> */}
+
             </div>
 
             <div id="about" className="w-full fade-in text-white overflow-hidden sm:hidden flex my-8 text-xl flex-col items-center opacity-40 gap-4">
