@@ -3,7 +3,7 @@ export function Footer() {
         <>
             <footer id="footer" className="h-full w-6/12 rounded-t-2xl justify-center dark:bg-neutral-950 bg-slate-300 flex gap-2 flex-row sm:px-8 py-5">
             <ul className="font-mono md:flex sm:flex-col hidden dark:text-white opacity-50 ">
-                <li>Anish Chhitu</li>
+                <li>Jay</li>
                 <li>Suriname</li>
                 <li>2007</li>
             </ul>

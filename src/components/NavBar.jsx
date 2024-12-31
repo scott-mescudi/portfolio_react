@@ -105,9 +105,9 @@ export function NavBar({NavItems}) {
                 ))}
             </ul>
 
-            <div className="ml-auto opacity-50 sm:flex hidden flex-row gap-5 group text-nowrap">
-            <p className="md:flex hidden">{date}</p>
-            <p>{time}</p>
+            <div className="ml-auto sm:flex hidden flex-row gap-5 group text-nowrap">
+            <p className="md:flex hidden opacity-50 cursor-default">{date}</p>
+            <p className="opacity-50 hover:opacity-90 duration-300 ease-in-out cursor-default">{time}</p>
             </div>
 
         </div>
