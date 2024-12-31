@@ -1,4 +1,4 @@
-const tech = [
+const Defaulttech = [
     {name: "Go", path: "logos/go.svg", description: "Efficient, concurrent typed language."},
     {name: "React", path: "logos/react.svg", description: "Javscript Library."},
     {name: "Tailwind CSS", path: "logos/tailwind.svg", description: "Utility-first CSS framework."},
@@ -9,7 +9,7 @@ const tech = [
     {name: "Docker", path: "logos/docker.svg", description: "Platform for containerizing applications."},
 ]
 
-export function TechGrid() {
+export function TechGrid({tech = Defaulttech, name = "Technologies i use" }) {
     return (
         <>
         <style>
@@ -21,7 +21,7 @@ export function TechGrid() {
         </style>
 
         <div className="w-1/2 flex flex-col my-5 items-center rounded-xl bg-neutral-950 p-4 gap-4 overflow-y-auto">
-            <h1 className="text-white w-full text-center gill font-semibold sm:text-3xl">Technologies i use</h1>
+            <h1 className="text-white w-full text-center gill font-semibold sm:text-3xl">{name}</h1>
             <div className="relative h-full w-full items-center overflow-hidden flex flex-col xl:grid xl:grid-cols-2 gap-4">
                 {tech.map((item, idx) => (
                     <div key={idx} class="bg-neutral-900 rounded-xl h-20 w-full p-2 flex flex-row items-center">
