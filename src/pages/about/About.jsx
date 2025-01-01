@@ -5,13 +5,13 @@ import "./about.css";
 export function About() {
     return (
         <>  
-            <div id="about" className="w-full fade-in text-white overflow-hidden sm:flex hidden my-8 text-2xl flex-col items-center gap-5">
+            <div id="about" className="w-full  text-white overflow-hidden sm:flex hidden my-8 text-2xl flex-col items-center gap-5">
                 <h1 className="w-6/12 text-center font-semibold sm:text-4xl">BACKGROUND</h1>
-                <p className=" opacity-40 w-6/12 text-whitel">
+                <p className=" opacity-40 fade-in w-6/12 text-whitel">
                 Hey! I’m a 17-year-old born in Suriname with a passion for programming, trading, and gaming. What drives me is the motivation to secure my future. I work hard to ensure I can lead a comfortable life later on with a family of five. My greatest strength? Perseverance. I might be average at many things, but when I truly want something, I give it my all to achieve it.
                 </p>
 
-                <p className=" opacity-40 w-6/12 text-whitel">
+                <p className=" opacity-40 fade-in w-6/12 text-whitel">
                 I chose this program because, during my time in high school, I felt like I wasn’t learning much that truly felt relevant.  
                 My motivation stems from my passion for technology and making a computer do what I want.  
                 I’m particularly drawn to backend development because I enjoy building systems that are efficient and powerful.  

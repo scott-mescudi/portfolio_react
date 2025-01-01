@@ -12,15 +12,15 @@ export function Home() {
                     <span className="opacity-50"> with a passion for backend development.</span>
                 </p>
                 <div id="socials" className="flex gap-4 pt-4 mt-2 justify-center sm:justify-start">
-                    <a className="hover:bg-neutral-800 h-8 w-8 duration-200 ease-in-out p-2 rounded-md flex items-center space-x-2" target="_blank" href="https://github.com/scott-mescudi">
+                    <a className="hover:bg-neutral-800 justify-center h-8 w-8 duration-300 ease-in-out p-2 rounded-md flex items-center space-x-2" target="_blank" href="https://github.com/scott-mescudi">
                         <i className="fab fa-github"></i>
                     </a>
 
-                    <a className="hover:bg-neutral-800 h-8 w-8 duration-200 ease-in-out p-2 rounded-md flex items-center space-x-2">
+                    <a target="_blank" href="https://www.instagram.com/" className="justify-center hover:bg-neutral-800 h-8 w-8 duration-300 ease-in-out p-2 rounded-md flex items-center space-x-2">
                         <i className="fab fa-instagram"></i>
                     </a>
 
-                    <a className="hover:bg-neutral-800 h-8 w-8 duration-200 ease-in-out p-2 rounded-md flex items-center space-x-2">
+                    <a target="_blank" href="https://www.linkedin.com/feed/" className="justify-center hover:bg-neutral-800 h-8 w-8 duration-300 ease-in-out p-2 rounded-md flex items-center space-x-2">
                         <i className="fab fa-linkedin"></i>
                     </a>
                 </div>
