@@ -17,8 +17,8 @@ export default function App() {
                 <Route path="/" element={<Navigate to="/home" />} />
                 <Route path="/home" element={<Home />}  />
                 <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects/>}  />
-                <Route path="/projects/stegano" element={<Stegano/>}  />
+                <Route path="/projects" element={<Projects />}  />
+                <Route path="/projects/stegano" element={<Stegano />}  />
               </Routes>
             </BrowserRouter>
             <Footer />
