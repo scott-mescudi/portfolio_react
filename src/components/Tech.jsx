@@ -1,6 +1,6 @@
 const DefaultTech = [
     {name: "Go", path: "logos/go.svg", description: "My go-to programming language."},
-    {name: "React", path: "logos/react.svg", description: "My Favorite javscript Library."},
+    {name: "React", path: "logos/react.svg", description: "My most used javascript Library."},
     {name: "Tailwind CSS", path: "logos/tailwind.svg", description: "Utility-first CSS framework."},
     {name: "PostgreSQL", path: "logos/logo12.svg", description: "The most reliable database i use."},
     {name: "Html", path: "logos/html.svg", description: "Building blocks of the web."},

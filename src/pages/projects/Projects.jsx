@@ -12,21 +12,26 @@ export function Projects({projects = DefaultProjects}) {
     return (
         <div className="min-h-screen my-5 w-full flex items-center flex-col ">
             <h1 className="w-6/12 text-white text-center font-semibold sm:text-4xl">NOTABLE PROJECTS</h1>
-            <div className="flex flex-col mt-7 w-6/12 gap-10 p-4">
+            <div className="flex flex-col mt-7 w-6/12 gap-5 ">
             {projects.map((item, idx) => (
-                    <div key={idx} className="w-full rounded-xl bg-neutral-950">
-                        <a href={item.url}><img src={item.image} alt="stegano" className="w-full h-1/2 rounded-t-xl"  /></a>
-                        <div className="py-4 px-8">
-                            <h1 className="text-white text-2xl font-semibold">{item.title}</h1>
-                            <p className="text-white text-sm mt-2 opacity-50">{item.description}</p>
+                <a>
+                    <div key={idx} className="w-full bg-neutral-950 rounded-xl overflow-hidden flex flex-row hover:scale-105 ease-in-out duration-200">
+                        <div id="image" className="w-2/5 bg-slate-800">
+                                <img className="w-full h-full object-cover" src="stegano.png"></img>
                         </div>
-                    
-                        <div className="w-full px-8 my-5 flex flex-row gap-4">
-                            <div class="h-16 sm:flex hidden w-20 bg-neutral-950 rounded-lg p-3 justify-center items-center">
-                                <img src="/logos/go.svg"class="h-full" />
+
+                        <div className="flex flex-col w-full">
+                            <div id="text" className="h-4/6 flex flex-col p-4 gill">
+                                <h1 className="text-white text-2xl">{item.title}</h1>
+                                <p className="text-white text-opacity-50 ">{item.description}</p>
+                            </div>
+
+                            <div id="tech" className="h-2/6 flex flex-col p-4 gill bg-white">
+
                             </div>
                         </div>
                     </div>
+                </a>
             ))}
 
             </div>
