@@ -6,10 +6,9 @@ const DefaultProjects = [
         title: "Stegano", 
         description: "A fast steganography library for Go, optimized for secure and efficient data embedding and retrieval with performance and scalability in mind.", 
         image: "stegano.svg", 
-        url: "https://github.com/scott-mescudi/stegano",
+        url: "/projects/stegano",
         widgets: [<GoWidget />] 
     },
-
 ];
 
 
@@ -20,10 +19,10 @@ export function Projects({projects = DefaultProjects}) {
     return (
         <>
         <div className="min-h-screen my-5 w-full  flex items-center flex-col">
-            <h1 className="w-6/12 text-white text-center font-semibold sm:text-4xl">NOTABLE PROJECTS</h1>
-            <div className="flex flex-col mt-7 w-6/12 gap-5">
+            <h1 className="sm:w-1/2 w-4/5 text-white text-center font-semibold sm:text-4xl">NOTABLE PROJECTS</h1>
+            <div className="flex flex-col mt-7 sm:w-1/2 w-4/5 gap-5">
                 {projects.map((item, idx) => (
-                    <a key={idx} href={item.url} target="_blank">
+                    <a key={idx} href={item.url}>
 
                         <div className="w-full lg:h-60 h-96  bg-neutral-950 rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-105 ease-in-out duration-200">
 
