@@ -9,16 +9,7 @@ const DefaultProjects = [
         url: "https://github.com/scott-mescudi/stegano",
         widgets: [<GoWidget />] 
     },
-    { 
-        title: "Portfolio Website", 
-        description: "A portfolio site showcasing my skills, projects, and experiences. Built with modern web technologies, it’s elegant, functional, and responsive.", 
-        image: "website.png", 
-        url: "", 
-        widgets: [
-            <ReactWidget key="react" />,
-            <TailwindWidget key="tailwind" />
-        ] 
-    },
+
 ];
 
 
@@ -46,7 +37,7 @@ export function Projects({projects = DefaultProjects}) {
                                     <p className="text-white text-opacity-50 lg:text-lg text-sm ">{item.description.length > 183 ? "too much text" : item.description}</p>
                                 </div>
 
-                                <div id="tech" className="overflow-hidden h-1/2 lg:flex hidden  items-center p-3 gap-3">
+                                <div id="tech" className="overflow-hidden h-1/2 lg:flex hidden items-center p-3 gap-3">
                                         {item.widgets.map((Widget, index) => (
                                             <div key={index}>{Widget}</div>
                                         ))}

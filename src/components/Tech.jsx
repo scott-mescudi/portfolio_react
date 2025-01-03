@@ -22,6 +22,7 @@ export function TechGrid({tech = DefaultTech, name = "Technologies i use" }) {
 
         <div id="stack" className="w-1/2 flex flex-col my-5 items-center rounded-xl bg-neutral-950 p-4 gap-4 overflow-y-auto">
             <h1 className="text-white w-full text-center gill font-semibold sm:text-3xl">{name}</h1>
+            
             <div className="relative h-full w-full items-center overflow-hidden pb-3 py-2 flex flex-col 2xl:grid 2xl:grid-cols-2  px-6 gap-6">
                 {tech.map((item, idx) => (
                     <div key={idx} class="bg-neutral-900 rounded-xl h-20 w-full p-2 flex flex-row items-center hover:scale-105 px-4 duration-300 ease-in-out">

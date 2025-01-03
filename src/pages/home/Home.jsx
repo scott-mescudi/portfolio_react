@@ -3,7 +3,7 @@ import { TechGrid } from "../../components/Tech";
 export function Home() {
     return (  
         <div className="min-h-screen w-full flex flex-col items-center ">
-            <div id="info" className="w-1/2 rounded-xl bg-neutral-950   px-6 text-white gill flex flex-col py-4 my-5">
+            <div id="info" className="w-1/2 rounded-xl bg-neutral-950  px-6 text-white gill flex flex-col py-4 my-5">
                 <h1 className="text-5xl font-bold">Hey, I'm Jay</h1>
                 <p className="opacity-50 text-2xl mt-2">Rotterdam, Netherlands</p>
                 <p className="mt-3 text-lg">
