@@ -57,7 +57,7 @@ export function NavBar({NavItems}) {
     };
 
     const GetLogo = () => {
-        let i = getRandomNumber(1, 13);
+        let i = getRandomNumber(1, 15);
         let newLogoPath = `/logos/logo${i}.svg`; 
 
         if (logoPath !== newLogoPath) {
