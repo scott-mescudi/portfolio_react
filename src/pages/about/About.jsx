@@ -23,15 +23,15 @@ export function About() {
             </div>
 
             <div id="about" className="w-full fade-in text-white overflow-hidden sm:hidden flex my-8 text-xl flex-col items-center opacity-40 gap-4">
-                <h1 className="sm:w-1/2 w-4/5 text-center text-white font-semibold sm:text-3xl">About me</h1>
+                <h1 className="sm:w-1/2 w-4/5 text-center text-white font-semibold sm:text-3xl">BACKGROUND</h1>
                 <p className="sm:w-1/2 w-4/5 text-white">
                    Hello! I’m a passionate programmer from Suriname with a strong interest in backend development, technology, and problem-solving. My journey into programming began with a curiosity about how systems work and has grown into a commitment to mastering cutting-edge backend techniques. I take pride in my perseverance and the drive to achieve my goals, no matter the challenges.
                 </p>
             </div>
 
 
-            <div id="boxes" className="w-full h-full lg:h-screen flex gap-5 flex-col items-center">
-                <div className="sm:w-1/2 w-4/5 h-80 sm:h-1/2 mt-5 bg-neutral-950 flex flex-col p-5 rounded-xl">
+            <div id="boxes" className="w-full h-full 2xl:h-screen flex gap-5 flex-col items-center">
+                <div className="sm:w-1/2 w-4/5 h-80 2xl:h-1/2 mt-5 bg-neutral-950 flex flex-col p-5 rounded-xl">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Cars</h1>
                         <p className="w-full text-white text-opacity-45">I love tuning and working on cars.</p>
                         <div className="w-full h-full p-5 flex justify-center items-center ">
@@ -39,15 +39,15 @@ export function About() {
                         </div> 
                 </div>
                 
-                <div className="sm:w-1/2 w-4/5 h-1/2 gap-5 mb-5 flex lg:flex-row flex-col">
-                    <div className="w-full h-80 sm:h-full p-5 bg-neutral-950 flex flex-col rounded-xl items-center">
+                <div className="sm:w-1/2 w-4/5 h-1/2 gap-5 mb-5 flex 2xl:flex-row flex-col">
+                    <div className="w-full h-80 2xl:h-full p-5 bg-neutral-950 flex flex-col rounded-xl items-center">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Photography</h1>
                         <p className="w-full text-white text-opacity-45">One of my recent hobbies.</p>
                         <div className="w-full h-full p-5 flex justify-center items-center ">
-                            <img decoding="async" loading="lazy" src="go.gif" className="rounded-md py-1 hover:scale-110 duration-500" /> {/* 'fume' remove this for photos from camera with a filter or sum to make it dark */}
+                            <img decoding="async" loading="lazy" src="go.gif" className="rounded-md py-1 hover:scale-110 duration-500" /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
                         </div> 
                     </div>
-                    <div className="w-full h-80 sm:h-full p-5 bg-neutral-950 flex flex-col rounded-xl items-center">
+                    <div className="w-full h-80 2xl:h-full p-5 bg-neutral-950 flex flex-col rounded-xl items-center">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Software</h1>
                         <p className="w-full text-white text-opacity-45">In my free time, I really enjoy software development. I love building things.</p>
                         <Lines />
