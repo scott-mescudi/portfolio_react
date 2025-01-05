@@ -6,6 +6,7 @@ body {
     overflow: scroll; /* Keeps both scrollbars visible */
 }
 
+
 /* Style for the scrollbar */
 body::-webkit-scrollbar {
     width: 0.5em; /* Adjust the width of the scrollbar */

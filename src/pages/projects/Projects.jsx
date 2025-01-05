@@ -19,12 +19,11 @@ export function Projects({projects = DefaultProjects}) {
     return (
         <>
         <div className="min-h-screen my-5 w-full  flex items-center flex-col">
-            <h1 className="sm:w-1/2 w-4/5 text-white text-center font-semibold sm:text-4xl">NOTABLE PROJECTS</h1>
             <div className="flex flex-col mt-7 sm:w-1/2 w-4/5 gap-5">
                 {projects.map((item, idx) => (
                     <a key={idx} href={item.url}>
 
-                        <div className="w-full lg:h-60 h-96  bg-neutral-950 rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-105 ease-in-out duration-200">
+                        <div className="w-full lg:h-60 h-96  bg-neutral-950 rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-105 ease-in-out duration-300">
 
                             <div id="image" className="lg:w-2/5 lg:h-full w-full h-3/5 bg-neutral-900">
                                 <img className="w-full h-full object-cover" src={item.image} alt="project image" />
