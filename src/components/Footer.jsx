@@ -5,8 +5,7 @@ export function Footer() {
                 <footer id="footer" className="h-full overflow-hidden sm:w-1/2 w-4/5 rounded-t-2xl justify-center dark:bg-neutral-950 flex bg-slate-300 gap-2 flex-row sm:px-8 py-5">
                     <ul className="font-mono md:flex sm:flex-col hidden dark:text-white opacity-50 ">
                         <li>Jay</li>
-                        <li>Suriname</li>
-                        <li>2007</li>
+                        <li>sxm</li>
                     </ul>
 
                     <div className="h-1/12 md:flex w-0.5 sm:ml-7 hidden opacity-40 rounded-md dark:bg-white"></div>
