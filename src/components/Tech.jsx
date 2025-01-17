@@ -25,7 +25,7 @@ export function TechGrid({tech = DefaultTech, name = "Technologies i use" }) {
             
             <div className="relative h-full w-full items-center overflow-hidden pb-3 py-2 flex flex-col  px-9 gap-6">
                 {tech.map((item, idx) => (
-                    <div key={idx} class="bg-neutral-900 rounded-xl h-20  w-full p-2 flex flex-row items-center hover:scale-105 px-4 duration-300 ease-in-out">
+                    <div key={idx} className="bg-neutral-900 rounded-xl h-20  w-full p-2 flex flex-row items-center hover:scale-[102%] will-change-transform px-4 duration-300 ease-in-out">
                         <div class="sm:w-16 w-full items-center h-16 flex justify-center rounded-md ">
                             <img src={item.path} class="h-full" />
                         </div>

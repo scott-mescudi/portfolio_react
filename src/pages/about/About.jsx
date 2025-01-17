@@ -26,7 +26,7 @@ function RotatingModel({ model = 'gtr.glb' }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotation((prev) => [prev[0], prev[1] + 0.0001, prev[2]]);
+      setRotation((prev) => [prev[0], prev[1] - 0.0001, prev[2]]);
     }, 1);  
 
     return () => clearInterval(interval);
@@ -48,11 +48,12 @@ export function Model() {
       <directionalLight position={[0, 10, 0]} intensity={1} />
       <directionalLight position={[-50, 13, -5]} intensity={2} />
       <directionalLight position={[50, 13, -5]} intensity={0.5} />
+      <directionalLight position={[30, 0, -5]} intensity={0.5} />
       <directionalLight position={[0, -20, 0]} intensity={4} />
       <hemisphereLight skyColor={0xaaaaaa} groundColor={0x444444} intensity={1} />
       <RotatingModel model="gtr.glb" />
 
-      <OrbitControls enablePan={false} maxPolarAngle={1.35} enableZoom={false} minPolarAngle={1.35} rotateSpeed={0.1} maxDistance={130} />
+      <OrbitControls enablePan={false} maxPolarAngle={1.35} enableZoom={false} minPolarAngle={1.1} rotateSpeed={0.1} maxDistance={130} />
     </Canvas>
   );
 }
