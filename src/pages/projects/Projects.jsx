@@ -23,7 +23,7 @@ export function Projects({projects = DefaultProjects}) {
                 {projects.map((item, idx) => (
                     <a key={idx} href={item.url} target="_blank">
 
-                        <div className="w-full lg:h-60 h-96  bg-neutral-950 rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-105 ease-in-out duration-300">
+                        <div className="w-full lg:h-60 h-96  bg-neutral-950 rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-[102%] will-change-transform ease-in-out duration-500">
 
                             <div id="image" className="lg:w-2/5 lg:h-full w-full h-3/5 bg-neutral-900">
                                 <img className="w-full h-full object-cover" src={item.image} alt="project image" />
