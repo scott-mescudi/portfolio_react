@@ -1,7 +1,7 @@
 import { Lines } from "../../animations/Lines";
-import React, {useEffect, useRef, } from 'react';
+import React, {useEffect, useRef, useState, } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { useGLTF, OrbitControls, Environment } from '@react-three/drei';
+import { useGLTF, OrbitControls } from '@react-three/drei';
 import "./about.css";
 
 function RotatingModel({ model = 'gtr.glb' }) {
@@ -22,8 +22,18 @@ function RotatingModel({ model = 'gtr.glb' }) {
     });
   }, [materials, scene]);
 
+  const [rotation, setRotation] = useState([0, 0, 0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation((prev) => [prev[0], prev[1] + 0.0001, prev[2]]);
+    }, 1);  
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <mesh ref={modelRef} scale={100} position={[0, -0.5, 0]}>
+    <mesh ref={modelRef} scale={100} rotation={rotation} position={[0, -0.5, 0]}>
       <primitive object={scene} />
     </mesh>
   );
@@ -38,6 +48,7 @@ export function Model() {
       <directionalLight position={[0, 10, 0]} intensity={1} />
       <directionalLight position={[-50, 13, -5]} intensity={2} />
       <directionalLight position={[50, 13, -5]} intensity={0.5} />
+      <directionalLight position={[0, -20, 0]} intensity={4} />
       <hemisphereLight skyColor={0xaaaaaa} groundColor={0x444444} intensity={1} />
       <RotatingModel model="gtr.glb" />
 
