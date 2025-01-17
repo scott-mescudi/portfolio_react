@@ -45,9 +45,9 @@ export function NavBar({NavItems}) {
 
     const evalpath = (p1, p2) => {
         if (p1 === p2.toLowerCase()) {
-            return "opacity-90";
+            return "text-opacity-90";
         } else {
-            return "opacity-50";
+            return "text-opacity-50 ";
         }
     }
 
@@ -97,17 +97,17 @@ export function NavBar({NavItems}) {
                 <img className="h-full w-full" src={logoPath} alt="logo" />
             </div>
 
-            <ul className="flex items-center flex-row  sm:ml-5 m-0 overflow-none" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
+            <ul className="flex items-center flex-row sm:ml-5 m-0 overflow-none" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
                 {NavItems.map((item, idx) => (
-                    <li className={`${enter ? "opacity-50" : evalpath(currPath, item.name)} hover:opacity-90 duration-200 ease-in-out bg-neutral-800 px-2 bg-opacity-0 hover:bg-opacity-50 rounded-xl`} key={idx}>
+                    <li className={`${enter ? "text-opacity-50 " : evalpath(currPath, item.name)} hover:text-opacity-90 duration-200 ease-out bg-neutral-900 px-3 py-1 border border-white text-white border-opacity-0 bg-opacity-0 hover:border-opacity-10 hover:bg-opacity-100 rounded-md`} key={idx}>
                         <a href={item.Path}>{item.name}</a>
                     </li>
                 ))}
             </ul>
 
             <div className="ml-auto flex flex-row gap-5 group text-nowrap">
-            <p className="md:flex hidden opacity-50 cursor-default">{date}</p>
-            <p className="opacity-50 hover:opacity-90 duration-300 ease-in-out cursor-default">{time}</p>
+            <p className="md:flex hidden text-opacity-50 text-white cursor-default">{date}</p>
+            <p className="text-opacity-50 text-white hover:text-opacity-90 duration-300 ease-in-out cursor-default">{time}</p>
             </div>
 
         </div>
