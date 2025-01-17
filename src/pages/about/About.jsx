@@ -1,8 +1,55 @@
 import { Lines } from "../../animations/Lines";
+import React, {useEffect, useRef, } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { useGLTF, OrbitControls, Environment } from '@react-three/drei';
 import "./about.css";
+
+function RotatingModel({ model = 'gtr.glb' }) {
+  const modelRef = useRef();
+  const { scene, materials } = useGLTF(model);
+
+
+  useEffect(() => {
+    Object.keys(materials).forEach((key) => {
+      const material = materials[key];
+      if (material.map) {
+        material.map.needsUpdate = true;
+      }
+
+      if (material.envMap) {
+        material.envMap = scene.background;
+      }
+    });
+  }, [materials, scene]);
+
+  return (
+    <mesh ref={modelRef} scale={100} position={[0, -0.5, 0]}>
+      <primitive object={scene} />
+    </mesh>
+  );
+}
+
+export function Model() {
+  return (
+    <Canvas className='hover:cursor-all-scroll' camera={{ position: [50, 10, 22], zoom: 30 }}>
+      <ambientLight intensity={1} />
+      <spotLight position={[10, 10, 10]} angle={0.15} intensity={2.5} />
+      <directionalLight castShadow={true} color={0xaaaaaa} position={[-10, -10, -10]} intensity={3} />
+      <directionalLight position={[0, 10, 0]} intensity={1} />
+      <directionalLight position={[-50, 13, -5]} intensity={2} />
+      <directionalLight position={[50, 13, -5]} intensity={0.5} />
+      <hemisphereLight skyColor={0xaaaaaa} groundColor={0x444444} intensity={1} />
+      <RotatingModel model="gtr.glb" />
+
+      <OrbitControls enablePan={false} maxPolarAngle={1.35} enableZoom={false} minPolarAngle={1.35} rotateSpeed={0.1} maxDistance={130} />
+    </Canvas>
+  );
+}
+
 
 
 export function About() {
+
     return (
         <>  
             <div id="about" className="w-full text-white overflow-hidden sm:flex hidden my-8 text-2xl flex-col items-center gap-5">
@@ -35,7 +82,7 @@ export function About() {
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Cars</h1>
                         <p className="w-full text-white text-opacity-45">I love tuning and working on cars.</p>
                         <div className="w-full h-full p-5 flex justify-center items-center ">
-                            <img decoding="async" loading="lazy" src="gtr.png" className="rounded-md hover:scale-110 duration-500" />
+                            <Model />
                         </div> 
                 </div>
                 
