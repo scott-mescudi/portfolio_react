@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const DefaultItems = [
-    {name: "Home", Path: "/"},
+    {name: "Home", Path: "/home"},
     {name: "About", Path: "/about"},
     {name: "Projects", Path: "/projects"},
 ]
