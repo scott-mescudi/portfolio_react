@@ -11,6 +11,7 @@ export default function App() {
     <>
       <div className="w-full dark:bg-black bg-slate-100 flex flex-col items-center overflow-y-auto min-h-screen">
             <NavBar />
+
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Navigate to="/home" />} />

@@ -1,10 +1,10 @@
-import { GoWidget, ReactWidget, TailwindWidget } from "../../components/Widgets";
+import { GoWidget } from "../../components/Widgets";
 
 
 const DefaultProjects = [
     { 
         title: "Stegano", 
-        description: "A fast steganography library for Go, optimized for secure and efficient data embedding and retrieval with performance and scalability in mind.", 
+        description: "A fast steganography library for Go, optimized for efficient data embedding and retrieval with performance in mind.", 
         image: "stegano.svg", 
         url: "https://github.com/scott-mescudi/stegano",
         widgets: [<GoWidget />] 
@@ -18,12 +18,12 @@ const DefaultProjects = [
 export function Projects({projects = DefaultProjects}) {
     return (
         <>
-        <div className="min-h-screen my-5 w-full  flex items-center flex-col">
+        <div id="projects" className="min-h-screen my-5 w-full  flex items-center flex-col">
             <div className="flex flex-col mt-7 sm:w-1/2 w-4/5 gap-5">
                 {projects.map((item, idx) => (
                     <a key={idx} href={item.url} target="_blank">
 
-                        <div className="w-full lg:h-60 h-96 border border-white border-opacity-10  bg-neutral-950 rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-[102%] will-change-transform ease-in-out duration-500">
+                        <div className="w-full lg:h-60 h-96 border border-white border-opacity-10  bg-black rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-[102%] will-change-transform ease-in-out duration-500">
 
                             <div id="image" className="lg:w-2/5 lg:h-full w-full h-3/5 bg-neutral-900">
                                 <img className="w-full h-full object-cover" src={item.image} alt="project image" />

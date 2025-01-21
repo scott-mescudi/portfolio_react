@@ -20,19 +20,19 @@ export function TechGrid({tech = DefaultTech, name = "Technologies i use" }) {
             `}
         </style>
 
-        <div id="stack" className="sm:w-1/2 border border-white border-opacity-10 py-5 w-4/5 flex flex-col my-5 items-center rounded-xl bg-neutral-950 gap-4 overflow-y-auto">
+        <div id="stack" className="sm:w-1/2 border border-white border-opacity-10 py-5 w-4/5 flex flex-col my-5 items-center rounded-xl bg-black gap-4 overflow-y-auto">
             <h1 className="text-white w-full text-center gill font-semibold sm:text-3xl">{name}</h1>
             
             <div className="relative h-full w-full items-center overflow-hidden pb-3 py-2 flex flex-col  px-9 gap-6">
                 {tech.map((item, idx) => (
-                    <div key={idx} className="bg-neutral-900  rounded-xl h-20  w-full p-2 flex flex-row items-center hover:scale-[102%] will-change-transform px-4 duration-300 ease-in-out">
-                        <div class="sm:w-16 w-full items-center h-16 flex justify-center rounded-md ">
-                            <img src={item.path} class="h-full" />
+                    <div key={idx} className="bg-neutral-950 rounded-xl h-20  w-full p-2 flex flex-row items-center hover:scale-[102%] will-change-transform px-4 duration-300 ease-in-out">
+                        <div className="sm:w-16 w-full items-center h-16 flex justify-center rounded-md ">
+                            <img draggable="false" src={item.path} alt={item.name} className="h-full" />
                         </div>
 
                         <div className="flex flex-col text-nowrap text-ellipsis ml-4">
-                            <p class="text-white sm:flex hidden gill">{item.name}</p>
-                            <p class="text-white md:flex hidden gill text-sm opacity-50">{item.description}</p>
+                            <p className="text-white sm:flex hidden gill">{item.name}</p>
+                            <p className="text-white md:flex hidden gill text-sm opacity-50">{item.description}</p>
                         </div>
                     </div>
                 ))}
