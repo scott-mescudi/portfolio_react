@@ -81,7 +81,7 @@ export function About() {
     return (
         <>  
             <div id="about" className="w-full text-white overflow-hidden sm:flex hidden my-8 text-2xl flex-col items-center gap-5">
-                <h1 className="sm:w-1/2 w-4/5 text-center font-semibold sm:text-4xl">BACKGROUND</h1>
+                <h1 className="sm:w-1/2 w-4/5 text-center font-semibold text-white text-opacity-100 sm:text-4xl">BACKGROUND</h1>
                 <p className=" text-white text-opacity-50 sm:w-1/2 w-4/5 text-whitel">
                 Hey! I’m a 17-year-old born in Suriname with a passion for programming, trading, and gaming. What drives me is the motivation to secure my future. I work hard to ensure I can lead a comfortable life later on with a family of five. My greatest strength? Perseverance. I might be average at many things, but when I truly want something, I give it my all to achieve it.
                 </p>
