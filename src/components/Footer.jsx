@@ -2,7 +2,7 @@ export function Footer() {
     return (
         <>
             <div className="w-full relative flex justify-center bottom-0">
-                <footer id="footer" className="h-full border border-white border-opacity-10 overflow-hidden sm:w-1/2 w-4/5 rounded-t-2xl justify-center bg-black flex gap-2 flex-row sm:px-8 py-5">
+                <footer id="footer" className="h-full border border-white border-b-0 border-opacity-10 overflow-hidden sm:w-1/2 w-4/5 rounded-t-2xl justify-center bg-black flex gap-2 flex-row sm:px-8 py-5">
                     <ul className="font-mono md:flex sm:flex-col hidden text-white opacity-50 ">
                         <li>Jay</li>
                         <li>sxm</li>
