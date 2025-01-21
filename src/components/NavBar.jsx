@@ -6,8 +6,6 @@ const DefaultItems = [
     {name: "Projects", Path: "/projects"},
 ]
 
-
-
 export function NavBar({NavItems}) {
     if (!NavItems) {
         NavItems = DefaultItems;
@@ -69,8 +67,6 @@ export function NavBar({NavItems}) {
         const timer = setInterval(getDateAndTime, 1000);
         const logoTimer = setInterval(GetLogo, 1000);
         let path =  window.location.pathname.replace("/", "")
-
-        console.log(path)
 
         if (path != currPath) {
             SetCurrPath(path)
