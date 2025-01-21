@@ -44,7 +44,7 @@ export function NavBar({NavItems}) {
     };
 
     const evalpath = (p1, p2) => {
-        if (p1 === p2.toLowerCase()) {
+        if (p1.toLowerCase() === p2.toLowerCase()) {
             return "text-opacity-90";
         } else {
             return "text-opacity-50 ";
@@ -70,6 +70,8 @@ export function NavBar({NavItems}) {
         const logoTimer = setInterval(GetLogo, 1000);
         let path =  window.location.pathname.replace("/", "")
 
+        console.log(path)
+
         if (path != currPath) {
             SetCurrPath(path)
         }   
@@ -91,8 +93,8 @@ export function NavBar({NavItems}) {
                 }
             `}
         </style>
-
-        <div id="navbar" className="sm:w-1/2 w-4/5 h-16 dark:bg-black flex-row mt-4 items-center justify-center lg:justify-normal dark:text-white flex gill">
+{/* maybe add border 'border-t-0 border-b-white border-x-white border-opacity-15' to make it more visible */}
+        <div id="navbar" className="sm:w-[51%] sm:px-5  rounded-b-xl w-[81%] h-16 sticky top-0 z-50 backdrop-blur-lg  flex-row  items-center justify-center lg:justify-normal dark:text-white flex gill">
             <div className="h-7 w-7 sm:flex hidden">
                 <img className="h-full w-full" src={logoPath} alt="logo" />
             </div>
