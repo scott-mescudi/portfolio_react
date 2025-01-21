@@ -90,7 +90,7 @@ export function NavBar({NavItems}) {
             `}
         </style>
 {/* maybe add border 'border-t-0 border-b-white border-x-white border-opacity-15' to make it more visible */}
-        <div id="navbar" className="sm:w-[51%] sm:px-5  rounded-b-xl w-[85%] h-16 sticky top-0 z-50 backdrop-blur-lg  flex-row  items-center justify-center lg:justify-normal dark:text-white flex gill">
+        <div id="navbar" className="sm:w-[51%] sm:px-5 pr-3 rounded-b-xl w-[85%] h-16 sticky top-0 z-50 backdrop-blur-lg  flex-row  items-center justify-center lg:justify-normal dark:text-white flex gill">
             <div className="h-7 w-7 sm:flex hidden">
                 <img className="h-full w-full" src={logoPath} alt="logo" />
             </div>
