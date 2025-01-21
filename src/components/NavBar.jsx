@@ -21,7 +21,7 @@ export function NavBar({NavItems}) {
     const [time, SetTime] = useState("4:20");
     const [date, SetDate] = useState("Wednesday 28");
     const [logoPath, SetLogoPath] = useState("logos/logo1.svg");
-    const [currPath, SetCurrPath] = useState("/");
+    const [currPath, SetCurrPath] = useState("/home");
     const [enter, setEnter] = useState(false)
     
     const getDateAndTime = () => {
