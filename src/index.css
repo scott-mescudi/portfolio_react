@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 body {
-    overflow: scroll; /* Keeps both scrollbars visible */
+    overflow: scroll; 
 }
 
 
-/* Style for the scrollbar */
+
 body::-webkit-scrollbar {
-    width: 0.5em; /* Adjust the width of the scrollbar */
-    height: 0.5em; /* Adjust the height for the horizontal scrollbar */
+    width: 0.5em; 
+    height: 0.5em; 
 }
 
-/* Style for the scrollbar track */
+
 body::-webkit-scrollbar-track {
-    background: #1a1a1a; /* Dark track color */
+    background: #1a1a1a; 
 }
 
-/* Style for the scrollbar thumb */
+
 body::-webkit-scrollbar-thumb {
-    background-color: #333; /* Dark thumb color */
-    border-radius: 10px; /* Optional: Rounded corners for the thumb */
+    background-color: #333; 
+    border-radius: 10px;
 }
 
 body::-webkit-scrollbar:horizontal {
