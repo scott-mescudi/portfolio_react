@@ -92,7 +92,7 @@ export function NavBar({NavItems}) {
             `}
         </style>
 
-        <div id="navbar" className="sm:w-1/2 w-4/5 px-1 h-16 dark:bg-black flex-row mt-4 items-center justify-center lg:justify-normal dark:text-white flex gill">
+        <div id="navbar" className="sm:w-1/2 w-4/5 h-16 dark:bg-black flex-row mt-4 items-center justify-center lg:justify-normal dark:text-white flex gill">
             <div className="h-7 w-7 sm:flex hidden">
                 <img className="h-full w-full" src={logoPath} alt="logo" />
             </div>

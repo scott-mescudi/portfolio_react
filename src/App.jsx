@@ -9,7 +9,7 @@ import { Projects } from "./pages/projects/Projects"
 export default function App() {
   return (
     <>
-      <div className="w-full dark:bg-black bg-slate-100 flex flex-col items-center overflow-y-auto min-h-screen">
+      <div className="w-full dark:bg-black select-none bg-slate-100 flex flex-col items-center overflow-y-auto min-h-screen">
             <NavBar />
 
             <BrowserRouter>
