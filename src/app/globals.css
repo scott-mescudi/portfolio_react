@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     overflow: scroll;
     background-color: black;
 }
-
-
 
 body::-webkit-scrollbar {
     width: 0.5em; 

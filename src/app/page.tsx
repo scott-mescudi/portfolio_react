@@ -1,9 +1,12 @@
 import React from "react";
-import { TechGrid } from "../../components/Tech";
+import { TechGrid } from "@/components/Tech";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
-export function Home() {
+
+
+export default function Home() {
     return (  
         <div className="min-h-screen w-full flex flex-col items-center ">
             <div id="info" className="sm:w-1/2 w-4/5 border border-white border-opacity-10 overflow-hidden rounded-xl bg-black px-6 text-white gill flex flex-row py-4 my-5">
@@ -17,34 +20,34 @@ export function Home() {
                     </p>
                     <div id="socials" className="flex gap-4 pt-4 mt-2 justify-center sm:justify-start">
                       
-                        <a 
+                        <Link 
                             aria-label="Link to Github" 
                             className="hover:bg-neutral-800 justify-center h-8 w-8 duration-300 ease-in-out p-2 rounded-md flex items-center space-x-2" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             href="https://github.com/scott-mescudi">
                             <FontAwesomeIcon icon={faGithub} />
-                        </a>
+                        </Link>
 
                   
-                        <a 
+                        <Link 
                             aria-label="Link to Instagram" 
                             className="justify-center hover:bg-neutral-800 h-8 w-8 duration-300 ease-in-out p-2 rounded-md flex items-center space-x-2" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             href="https://www.instagram.com/">
                             <FontAwesomeIcon icon={faInstagram} />
-                        </a>
+                        </Link>
 
                   
-                        <a 
+                        <Link 
                             aria-label="Link to Linkedin" 
                             className="justify-center hover:bg-neutral-800 h-8 w-8 duration-300 ease-in-out p-2 rounded-md flex items-center space-x-2" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             href="https://www.linkedin.com/feed/">
                             <FontAwesomeIcon icon={faLinkedin} />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

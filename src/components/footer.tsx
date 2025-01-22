@@ -6,6 +6,8 @@ export function Footer() {
                     <ul className="font-mono md:flex sm:flex-col hidden text-white opacity-50 ">
                         <li>Jay</li>
                         <li>sxm</li>
+
+                        
                     </ul>
 
                     <div className="h-1/12 md:flex w-0.5 sm:ml-7 hidden opacity-40 rounded-md bg-white"></div>

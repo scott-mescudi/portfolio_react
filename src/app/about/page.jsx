@@ -1,7 +1,10 @@
-import { Lines } from "../../animations/Lines";
+'use client'
+
+import { Lines } from '@/components/Lines';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useGLTF, OrbitControls } from '@react-three/drei';
+
 
 
 function RotatingModel({ model = 'gtr.glb' }) {
@@ -76,8 +79,7 @@ export function Model() {
 }
 
 
-
-export function About() {
+export default function About() {
     return (
         <>  
             <div id="about" className="w-full text-white overflow-hidden sm:flex hidden my-8 text-2xl flex-col items-center gap-5">
@@ -110,7 +112,7 @@ export function About() {
                         <h1 className="w-full text-white px-5 font-semibold sm:text-2xl">Cars</h1>
                         <p className="w-full text-white px-5 text-opacity-45">I love tuning and working on cars.</p>
                         <div className="w-full relative h-full py-5 flex justify-center items-center ">
-                          <Model />
+                        <Model />
                            
                         </div> 
                 </div>

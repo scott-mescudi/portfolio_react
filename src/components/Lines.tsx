@@ -16,7 +16,7 @@ const Line = styled.div`
     width: 120px;
     height: 8px;
     border-radius: 20px;
-    animation: ${(props) => moveLine()} 10s linear infinite;
+    animation: ${(props:any) => moveLine()} 10s linear infinite;
 `;
 
 export function Lines() {

@@ -1,12 +1,15 @@
+'use client'
 import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
+import Link from "next/link";
 
 const DefaultItems = [
-    {name: "Home", Path: "/home"},
+    {name: "Home", Path: "/"},
     {name: "About", Path: "/about"},
     {name: "Projects", Path: "/projects"},
 ]
 
-export function NavBar({NavItems}) {
+export function NavBar({NavItems}:any) {
     if (!NavItems) {
         NavItems = DefaultItems;
     }
@@ -19,7 +22,8 @@ export function NavBar({NavItems}) {
     const [time, SetTime] = useState("4:20");
     const [date, SetDate] = useState("Wednesday 28");
     const [logoPath, SetLogoPath] = useState("logos/logo1.svg");
-    const [currPath, SetCurrPath] = useState("/home");
+    const pathname = usePathname();
+    const [currPath, SetCurrPath] = useState(pathname === "/" ? "Home" : pathname.slice(1));
     const [enter, setEnter] = useState(false)
     
     const getDateAndTime = () => {
@@ -41,7 +45,7 @@ export function NavBar({NavItems}) {
         SetDate(formattedDate);
     };
 
-    const evalpath = (p1, p2) => {
+    const evalpath = (p1: string, p2: string) => {
         if (p1.toLowerCase() === p2.toLowerCase()) {
             return "text-opacity-90";
         } else {
@@ -50,7 +54,7 @@ export function NavBar({NavItems}) {
     }
 
 
-    const getRandomNumber = (x, y) => {
+    const getRandomNumber = (x: number, y: number) => {
         return Math.floor(Math.random() * (y - x + 1)) + x;
     };
 
@@ -63,14 +67,13 @@ export function NavBar({NavItems}) {
         }
     };
 
+    const HandlePage = (path:string) => {
+        SetCurrPath(path)
+    }
+
     useEffect(() => {
         const timer = setInterval(getDateAndTime, 1000);
         const logoTimer = setInterval(GetLogo, 1000);
-        let path =  window.location.pathname.replace("/", "")
-
-        if (path != currPath) {
-            SetCurrPath(path)
-        }   
         
         getDateAndTime();
 
@@ -79,6 +82,15 @@ export function NavBar({NavItems}) {
             clearInterval(logoTimer);
         };
     }, []);
+
+
+    useEffect(() => {
+        SetCurrPath(pathname === "/" ? "Home" : pathname.slice(1));
+    }, [pathname]);
+
+    useEffect(() => {
+        console.log(currPath)
+    }, [currPath])
 
     return (
         <> 
@@ -89,16 +101,16 @@ export function NavBar({NavItems}) {
                 }
             `}
         </style>
-{/* maybe add border 'border-t-0 border-b-white border-x-white border-opacity-15' to make it more visible */}
+        {/* maybe add border 'border-t-0 border-b-white border-x-white border-opacity-15' to make it more visible */}
         <div id="navbar" className="sm:w-[51%] sm:px-5 pr-3 rounded-b-xl w-[85%] h-16 sticky top-0 z-50 backdrop-blur-lg  flex-row  items-center justify-center lg:justify-normal dark:text-white flex gill">
             <div className="h-7 w-7 sm:flex hidden">
                 <img className="h-full w-full" src={logoPath} alt="logo" />
             </div>
 
             <ul className="flex items-center flex-row sm:ml-5 m-0 overflow-none" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
-                {NavItems.map((item, idx) => (
+                {NavItems.map((item:any , idx:number) => (
                     <li className={`${enter ? "text-opacity-50 " : evalpath(currPath, item.name)} hover:text-opacity-90 duration-200 ease-out bg-neutral-900 px-3 py-1 border border-white text-white border-opacity-0 bg-opacity-0 hover:border-opacity-10 hover:bg-opacity-100 rounded-md`} key={idx}>
-                        <a href={item.Path}>{item.name}</a>
+                        <Link onClick={ () => HandlePage(item.name)} href={item.Path}>{item.name}</Link>
                     </li>
                 ))}
             </ul>
