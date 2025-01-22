@@ -3,21 +3,17 @@ import { useEffect, useState } from "react";
 import { usePathname } from 'next/navigation';
 import Link from "next/link";
 
-const DefaultItems = [
-    {name: "Home", Path: "/"},
-    {name: "About", Path: "/about"},
-    {name: "Projects", Path: "/projects"},
-]
+interface NavItem {
+    name: string
+    Path: string
+}
 
-export function NavBar({NavItems}:any) {
-    if (!NavItems) {
-        NavItems = DefaultItems;
-    }
-
-    if (NavItems.length >= 10) {
-        console.error("Error: Too many NavItems, using default");
-        NavItems = DefaultItems;  
-    }
+export function NavBar() {
+    const NavItems: NavItem[] = [
+        {name: "Home", Path: "/"},
+        {name: "About", Path: "/about"},
+        {name: "Projects", Path: "/projects"},
+    ]
 
     const [time, SetTime] = useState("4:20");
     const [date, SetDate] = useState("Wednesday 28");
@@ -27,14 +23,14 @@ export function NavBar({NavItems}:any) {
     const [enter, setEnter] = useState(false)
     
     const getDateAndTime = () => {
-        let currentDateTime = new Date();
-        let formattedDate = currentDateTime.toLocaleDateString('en-US', {
+        const currentDateTime = new Date();
+        const formattedDate = currentDateTime.toLocaleDateString('en-US', {
             weekday: 'long',
             month: 'short',
             day: 'numeric',
         });
 
-        let formattedTime = currentDateTime.toLocaleTimeString('en-US', {
+        const formattedTime = currentDateTime.toLocaleTimeString('en-US', {
             hour: 'numeric',
             minute: '2-digit',
             hour12: false,
@@ -59,8 +55,8 @@ export function NavBar({NavItems}:any) {
     };
 
     const GetLogo = () => {
-        let i = getRandomNumber(1, 15);
-        let newLogoPath = `/logos/logo${i}.svg`; 
+        const i = getRandomNumber(1, 15);
+        const newLogoPath = `/logos/logo${i}.svg`; 
 
         if (logoPath !== newLogoPath) {
             SetLogoPath(newLogoPath);
@@ -108,7 +104,7 @@ export function NavBar({NavItems}:any) {
             </div>
 
             <ul className="flex items-center flex-row sm:ml-5 m-0 overflow-none" onMouseEnter={() => {setEnter(true)}} onMouseLeave={() => {setEnter(false)}}>
-                {NavItems.map((item:any , idx:number) => (
+                {NavItems.map((item:NavItem , idx:number) => (
                     <li  key={idx}>
                         <Link className={`${enter ? "text-opacity-50 " : evalpath(currPath, item.name)} hover:text-opacity-100 duration-200 ease-out bg-neutral-950 px-3 py-2 border border-white text-white border-opacity-0 bg-opacity-0 hover:border-opacity-10 hover:bg-opacity-100 rounded-md`} onClick={ () => HandlePage(item.name)} href={item.Path}>{item.name}</Link>
                     </li>
