@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { GoWidget} from "../../components/Widgets";
 import Link from "next/link";
-import Image from "next/Image";
+import Image from 'next/image'
 
 interface Project {
     title: string
