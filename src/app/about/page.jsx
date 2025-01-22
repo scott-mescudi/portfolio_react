@@ -7,9 +7,9 @@ import { useGLTF, OrbitControls } from '@react-three/drei';
 
 
 
-function RotatingModel({ model = 'gtr.glb' }) {
+function RotatingModel() {
   const modelRef = useRef();
-  const { scene, materials } = useGLTF(model);
+  const { scene, materials } = useGLTF('gtr.glb');
 
 
 
@@ -71,7 +71,7 @@ export function Model() {
         <directionalLight position={[30, 0, -5]} intensity={0.5} />
         <directionalLight position={[0, -20, 0]} intensity={4} />
         <hemisphereLight skyColor={0xaaaaaa} groundColor={0x444444} intensity={1} />
-        <RotatingModel model="gtr.glb" />
+        <RotatingModel />
         <OrbitControls enablePan={false} maxPolarAngle={1.35} enableZoom={false} minPolarAngle={1.1} rotateSpeed={0.1} maxDistance={130} />
       </Canvas>
     </>
