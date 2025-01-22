@@ -35,7 +35,7 @@ function RotatingModel() {
   );
 }
 
-export function Model() {
+ function Model() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
