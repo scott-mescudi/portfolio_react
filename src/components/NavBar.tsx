@@ -84,9 +84,6 @@ export function NavBar() {
         SetCurrPath(pathname === "/" ? "Home" : pathname.slice(1));
     }, [pathname]);
 
-    useEffect(() => {
-        console.log(currPath)
-    }, [currPath])
 
     return (
         <> 
