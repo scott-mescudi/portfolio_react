@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens: {
+        '1080p': '1920px',
+      },
     },
   },
   plugins: [],
