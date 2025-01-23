@@ -12,8 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      screens: {
-        '1080p': '1920px',
+      boxShadow: {
+        'inner-lg': 'inset 0px 10px 30px rgba(255, 255, 255, 0.1)', 
+        'inner-xl': 'inset 0 15px 40px rgba(255, 255, 255, 0.1)', 
       },
     },
   },

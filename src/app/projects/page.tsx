@@ -1,5 +1,3 @@
-import { ReactElement } from "react";
-import { GoWidget} from "../../components/Widgets";
 import Link from "next/link";
 import Image from 'next/image'
 
@@ -8,7 +6,8 @@ interface Project {
     description: string
     image: string
     url: string
-    widgets: ReactElement[]
+    tags: string[],
+ 
 }
 
 
@@ -17,10 +16,18 @@ export default function Projects() {
         { 
             title: "Stegano", 
             description: "A fast steganography library for Go, optimized for efficient data embedding and retrieval with performance in mind.", 
-            image: "stegano.svg", 
+            image: "/portfolio/stegano.svg", 
             url: "https://github.com/scott-mescudi/stegano",
-            widgets: [<GoWidget key="gowidget" />], 
+            tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"]
         },
+        { 
+            title: "Photography showcase", 
+            description: "A website built for a photgrapher to shwo his personla work", 
+            image: "/portfolio/timme.png", 
+            url: "https://timme-delta.vercel.app/",
+            tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"]
+        },
+        
     ];
 
 
@@ -30,27 +37,25 @@ export default function Projects() {
             <div className="flex flex-col mt-7 sm:w-1/2 w-4/5 gap-5">
                 {projects.map((item:Project, idx:number) => (
                     <Link key={idx} href={item.url} target="_blank">
-                        <div className="w-full lg:h-60 h-96 border border-white border-opacity-10  bg-black rounded-xl lg:flex-row overflow-hidden flex flex-col hover:scale-[102%] will-change-transform ease-in-out duration-500">
-
-                            <div id="image" className="lg:w-2/5 lg:h-full w-full h-3/5 bg-neutral-900">
-                                <Image width={1000} height={1000} priority className="w-full h-full object-cover" src={item.image} alt="project image" />
+                        <div className="w-full relative grid grid-cols-1 aspect-video border border-white  border-opacity-10 bg-black rounded-xl shadow-inner-xl hover:scale-[101%] will-change-transform duration-500 ease-in-out overflow-hidden ">
+                            <div className="absolute overflow-hidden">
+                                <Image className="object-cover" src={item.image} width={1920} height={1080} alt={item.title} />
                             </div>
-
-                            <div className="flex flex-col lg:w-3/5 w-full ">
-                                <div id="text" className="h-1/2 flex flex-col p-4 gill">
-                                    <h1 className="text-white text-2xl">{item.title}</h1>
-                                    <p className="text-white text-opacity-50 lg:text-lg text-sm ">{item.description.length > 183 ? "too much text" : item.description}</p>
-                                </div>
-
-                                <div id="tech" className="overflow-hidden h-1/2 lg:flex hidden items-center p-3 gap-3">
-                                        {item.widgets.map((Widget:ReactElement, idx:number) => (
-                                            <div key={idx}>{Widget}</div>
-                                        ))}
+                            
+                            <div className="w-full mt-auto will-change-transform bg-black bg-opacity-50 backdrop-blur-md">
+                                <div className="w-full h-full px-5 py-3 flex flex-col ">
+                                    <div className="flex flex-row gap-5">
+                                        <h1 className="text-white text-sm font-bold sm:text-3xl">{item.title}</h1>
+                                        <div className="flex flex-row gap-3 items-start">
+                                            {item.tags.map((item:string, idx:number) => (
+                                                <Image key={idx} alt={item} width={50} height={50} className="xl:size-10 size-5" src={item} />
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <p className="text-white text-opacity-50 xl:text-lg text-xs truncate text-ellipsis">{item.description}</p>
                                 </div>
                             </div>
-
                         </div>
-                        
                     </Link>
                 ))}
             </div>
@@ -58,3 +63,17 @@ export default function Projects() {
         </>
     );
 }
+
+
+
+// <div className="w-full h-full px-5 py-3 flex flex-col ">
+//     <div className="flex flex-row gap-5">
+//         <h1 className="text-white text-sm font-bold sm:text-3xl">{item.title}</h1>
+//         <div className="flex flex-row gap-3 items-start">
+//             {item.tags.map((item:string, idx:number) => (
+//                 <Image key={idx} alt={item} width={50} height={50} className="xl:size-10 size-5" src={item} />
+//             ))}
+//         </div>
+//     </div>
+//     <p className="text-white text-opacity-50 xl:text-lg text-xs truncate text-ellipsis">{item.description}</p>
+// </div>

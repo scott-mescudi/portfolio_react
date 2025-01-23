@@ -25,7 +25,7 @@ export default function About() {
                     </div>
 
                     <div className='flex flex-col gap-1'>
-                        <p className='w-full  text-white tracking-wide text-opacity-35'>GOAL</p>
+                        <p className='w-full text-white tracking-wide text-opacity-35'>GOAL</p>
                         <p className='w-full text-lg text-white text-opacity-50'>My ultimate goal is to build my own startup, where I can apply everything I’ve learned and continue growing. I have a unique approach to development: I start by building a basic implementation and then spend hours profiling and optimizing the code. I dive deep into stack traces and enjoy the learning process, knowing that every challenge helps me grow as a developer.</p>
                     </div>
                 </div>
