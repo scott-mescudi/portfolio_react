@@ -30,7 +30,7 @@ export default function About() {
                     </div>
                 </div>
                 
-                <div className='w-full justify-between  flex-col border border-white border-opacity-15 p-5 text-white rounded-xl'>
+                <div className='w-full justify-evenly  flex-col border border-white border-opacity-15 p-5 text-white rounded-xl'>
                     <iframe 
                         className="rounded-md" 
                         src="https://open.spotify.com/embed/track/3TVWXE8hUeSzoAC3xCrErX?utm_source=generator"
