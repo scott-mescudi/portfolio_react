@@ -69,7 +69,7 @@ export function NavBar() {
 
     useEffect(() => {
         const timer = setInterval(getDateAndTime, 1000);
-        const logoTimer = setInterval(GetLogo, 1000);
+        const logoTimer = setInterval(GetLogo, 3000);
         
         getDateAndTime();
 
