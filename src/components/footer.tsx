@@ -6,8 +6,6 @@ export function Footer() {
                     <ul className="font-mono md:flex sm:flex-col hidden text-white opacity-50 ">
                         <li>Jay</li>
                         <li>sxm</li>
-
-                        
                     </ul>
 
                     <div className="h-1/12 md:flex w-0.5 sm:ml-7 hidden opacity-40 rounded-md bg-white"></div>
@@ -22,7 +20,7 @@ export function Footer() {
 
                     <ul className="font-mono ml-3 text-white ">
                         <li className="opacity-90">Pages:</li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/home">Home</a></li>
+                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/">Home</a></li>
                         <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/about">About</a></li>
                         <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/projects">Projects</a></li>
                     </ul>
