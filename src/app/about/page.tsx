@@ -36,26 +36,26 @@ export default function About() {
 
     
 
-            <div id="boxes" className="w-full h-full 2xl:h-screen flex gap-5 flex-col items-center">
+            <div id="boxes" className="w-full h-full 2xl:h-screen flex gap-3 flex-col items-center">
                 <div className="sm:w-1/2 border border-white border-opacity-10 w-4/5 h-80 2xl:h-1/2 mt-5 bg-black flex flex-col py-5 rounded-xl">
                         <h1 className="w-full text-white px-5 font-semibold sm:text-2xl">Cars</h1>
-                        <p className="w-full text-white px-5 text-opacity-45">I love tuning and working on cars.</p>
+                        <p className="w-full text-white px-5 text-opacity-50">I love tuning and working on cars.</p>
                         <div className="w-full relative h-full py-5 flex justify-center items-center ">
                         <Model />
                         </div> 
                 </div>
                 
-                <div className="sm:w-1/2 w-4/5 h-1/2 gap-5 mb-5 flex 2xl:flex-row flex-col">
+                <div className="sm:w-1/2 w-4/5 h-1/2 gap-3 mb-5 flex 2xl:flex-row flex-col">
                     <div className="w-full overflow-hidden border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Photography</h1>
-                        <p className="w-full text-white text-opacity-45">One of my recent hobbies.</p>
+                        <p className="w-full text-white text-opacity-50">One of my recent hobbies.</p>
                         <div className="w-full p-5 flex justify-center items-center ">
-                            <img draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="go.gif" className="rounded-md py-1 hover:scale-110 duration-500" /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
+                            <img draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="/go.gif" className="rounded-md py-1 hover:scale-110 duration-500" /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
                         </div> 
                     </div>
                     <div className="w-full border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Software</h1>
-                        <p className="w-full text-white text-opacity-45">In my free time, I enjoy building things to solve problems and automate my life.</p>
+                        <p className="w-full text-white text-opacity-50">In my free time, I enjoy building things to solve problems and automate my life.</p>
                         <Lines />
                     </div>
                 </div>
