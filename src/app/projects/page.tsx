@@ -37,6 +37,7 @@ function ProjectCard({ item }: { item: Project }) {
 }
 
 
+
 export default function Projects() {
     const projects:Project[] = [
         { 
@@ -51,7 +52,7 @@ export default function Projects() {
             description: "A website created for a photographer to showcase his personal work.", 
             image: "/portfolio/timme.png", 
             url: "https://timme-delta.vercel.app/",
-            tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"]
+            tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"]
         },
     ];
 
