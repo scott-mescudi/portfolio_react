@@ -1,12 +1,13 @@
 const DefaultTech = [
-    {name: "Go", path: "logos/go.svg", description: "My go-to programming language."},
+    {name: "Go", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg", description: "My go-to programming language."},
+    {name: "Next.js", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", description: "My favorite react framework."},
     {name: "React", path: "logos/logo14.svg", description: "My most used javascript Library."},
     {name: "Tailwind CSS", path: "logos/logo15.svg", description: "Utility-first CSS framework."},
     {name: "PostgreSQL", path: "logos/logo12.svg", description: "The most reliable database i use."},
-    {name: "Html", path: "logos/html.svg", description: "Building blocks of the web."},
-    {name: "TypeScript", path: "logos/typescript.svg", description: "Statically typed superset of JavaScript."},  
+    {name: "Html", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", description: "Building blocks of the web."},
+    {name: "TypeScript", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", description: "Statically typed superset of JavaScript."},  
     {name: "C", path: "logos/c.svg", description: "For my high-performance needs."},
-    {name: "Docker", path: "logos/docker.svg", description: "For containerizing my applications."},
+    {name: "Docker", path: "https://devicon-website.vercel.app/api/docker/original.svg", description: "For containerizing my applications."},
 ]
 
 export function TechGrid({tech = DefaultTech, name = "Technologies i use" }) {
