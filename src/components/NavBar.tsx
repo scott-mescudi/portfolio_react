@@ -15,8 +15,8 @@ export function NavBar() {
         {name: "Projects", Path: "/projects"},
     ]
 
-    const [time, SetTime] = useState("4:20");
-    const [date, SetDate] = useState("Wednesday 28");
+    const [time, SetTime] = useState("");
+    const [date, SetDate] = useState("");
     const [logoPath, SetLogoPath] = useState("logos/logo1.svg");
     const pathname = usePathname();
     const [currPath, SetCurrPath] = useState(pathname === "/" ? "Home" : pathname.slice(1));
