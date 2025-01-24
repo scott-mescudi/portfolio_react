@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
     return (
         <>
@@ -12,17 +14,17 @@ export function Footer() {
 
                     <ul className="font-mono w-[80px] ml-3 text-white ">
                         <li className="opacity-90 ">Links:</li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out "><a target="_blank" href="https://github.com/scott-mescudi">Github.1</a></li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out "><a target="_blank" href="https://github.com/gopher93185789">Github.2</a></li>
+                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out "><Link target="_blank" href="https://github.com/scott-mescudi">Github.1</Link></li>
+                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out "><Link target="_blank" href="https://github.com/gopher93185789">Github.2</Link></li>
                     </ul>
 
                     <div className="h-1/12 sm:flex w-0.5 sm:ml-7 hidden opacity-40 rounded-md bg-white"></div>
 
                     <ul className="font-mono ml-3 text-white ">
                         <li className="opacity-90">Pages:</li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/">Home</a></li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/about">About</a></li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><a href="/projects">Projects</a></li>
+                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><Link href="/">Home</Link></li>
+                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><Link href="/about">About</Link></li>
+                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><Link href="/projects">Projects</Link></li>
                     </ul>
                 </footer>
             </div>
