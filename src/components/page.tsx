@@ -7,7 +7,7 @@ export default function About() {
     return (
         <div className='min-h-screen flex flex-col  items-center w-full'>  
             <div className='sm:w-1/2 w-4/5 mt-3 h-fit select-none flex 1xl:flex-row 2xl:flex-row flex-col gap-5'> 
-                <div className='w-full  flex flex-col border gap-5 border-white border-opacity-15 p-5 text-white rounded-xl'>
+                <div className='w-full  flex flex-col border gap-5 border-white border-opacity-10 p-5 text-white rounded-xl'>
                     <h1 className='w-full text-white font-semibold sm:text-2xl'>About</h1>
                     <div className='flex flex-col gap-1'>
                         <p className='w-full  text-white tracking-wide text-opacity-35'>TODAY</p>

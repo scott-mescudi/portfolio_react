@@ -23,7 +23,6 @@ export function Footer() {
                     <ul className="font-mono ml-3 text-white ">
                         <li className="opacity-90">Pages:</li>
                         <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><Link href="/">Home</Link></li>
-                        <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><Link href="/about">About</Link></li>
                         <li className="opacity-50 hover:opacity-90 duration-200 ease-in-out"><Link href="/projects">Projects</Link></li>
                     </ul>
                 </footer>
