@@ -46,7 +46,7 @@ export default function About() {
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Photography</h1>
                         <p className="w-full text-white text-opacity-50">One of my recent hobbies.</p>
                         <div className="w-full h-full p-5 flex justify-center overflow-hidden items-center ">
-                            <img  draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="/go.gif" className="rounded-md h-3/5 aspect-square py-1 hover:scale-110 duration-500" /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
+                            <img  draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="/go.gif" className="h-3/5 py-1 " /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
                         </div> 
                     </div>
                     <div className="w-full border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">
