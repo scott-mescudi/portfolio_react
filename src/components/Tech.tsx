@@ -3,7 +3,7 @@ const DefaultTech = [
     {name: "Next.js", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg", description: "Makes react better with SSR and SSG."},
     {name: "React", path: "logos/logo14.svg", description: "Dynamic UIs made easy."},
     {name: "Tailwind CSS", path: "logos/logo15.svg", description: "Because writing CSS from scratch causes nightmares."},
-    {name: "Three.js", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg", description: "Bringing 3D models to the web."},
+    {name: "Three.js", path: "logos/Threejs.svg", description: "Bringing 3D models to the web."},
     {name: "PostgreSQL", path: "logos/logo12.svg", description: "The most reliable database i use."},
     {name: "Html", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg", description: "The backbone of the web."},
     {name: "TypeScript", path: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg", description: "Javascript but safer"},  
