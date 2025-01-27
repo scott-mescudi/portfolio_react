@@ -43,10 +43,10 @@ export default function About() {
                 
                 <div className="sm:w-1/2 w-4/5 h-1/2 gap-3 mb-5 flex 2xl:flex-row flex-col">
                     <div className="w-full overflow-hidden border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">
-                        <h1 className="w-full text-white font-semibold sm:text-2xl">Photography</h1>
+                        <h1 className="w-full text-white font-semibold sm:text-2xl">Powerlifting</h1>
                         <p className="w-full text-white text-opacity-50">One of my recent hobbies.</p>
                         <div className="w-full h-full p-5 flex justify-center overflow-hidden items-center ">
-                            <img  draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="/go.gif" className="h-3/5 py-1 " /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
+                            <img  draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="/gopher.png" className="h-3/5 py-1 " /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
                         </div> 
                     </div>
                     <div className="w-full border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">

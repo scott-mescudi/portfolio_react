@@ -11,6 +11,7 @@ interface NavItem {
 export function NavBar() {
     const NavItems: NavItem[] = [
         {name: "Home", Path: "/"},
+        {name: "About", Path: "/about"},
         {name: "Projects", Path: "/projects"},
     ]
 

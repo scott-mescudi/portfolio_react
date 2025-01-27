@@ -3,7 +3,6 @@ import { TechGrid } from "@/components/Tech";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import About from "../components/page";
 
 
 
@@ -54,7 +53,6 @@ export default function Home() {
             </div>
             
             <TechGrid />
-            <About />
         </div>
     );
 }
