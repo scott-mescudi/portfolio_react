@@ -8,6 +8,7 @@ interface NavItem {
     Path: string
 }
 
+
 export function NavBar() {
     const NavItems: NavItem[] = [
         {name: "Home", Path: "/"},
