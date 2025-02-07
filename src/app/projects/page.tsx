@@ -13,7 +13,7 @@ interface Project {
 function ProjectCard({ item }: { item: Project }) {
     return(
         <>
-        <div className="w-full relative grid grid-cols-1 aspect-video border border-white group border-opacity-10 bg-black rounded-xl overflow-hidden ">
+        <div className="w-full  relative grid grid-cols-1 aspect-video border border-white group border-opacity-10 bg-black rounded-xl overflow-hidden ">
             <div className="absolute W">
                 <Image className="object-cover" src={item.image} width={1920} height={1080} alt={item.title} />
             </div>

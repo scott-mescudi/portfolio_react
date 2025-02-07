@@ -1,7 +1,8 @@
 'use client'
 
-import { Lines } from '@/components/Lines';
+import MagnetLines from '@/components/Magnet';
 import { Model } from '@/components/Model'
+import Orb from '@/components/Orb';
 
 export default function About() {
     return (
@@ -33,26 +34,29 @@ export default function About() {
 
 
             <div id="boxes" className="w-full h-full 2xl:h-screen flex gap-3 flex-col items-center">
+            
                 <div className="sm:w-1/2 border border-white border-opacity-10 w-4/5 h-80 2xl:h-1/2 mt-5 bg-black flex flex-col py-5 rounded-xl">
-                        <h1 className="w-full text-white px-5 font-semibold sm:text-2xl">Cars</h1>
-                        <p className="w-full text-white px-5 text-opacity-50">I love tuning and working on cars.</p>
-                        <div className="w-full relative h-full py-5 flex justify-center items-center ">
+                    <h1 className="w-full text-white px-5 font-semibold sm:text-2xl">Cars</h1>
+                    <p className="w-full text-white px-5 text-opacity-50">I love tuning and working on cars.</p>
+                    <div className="w-full relative h-full py-5 flex justify-center items-center ">
                         <Model />
-                        </div> 
+                    </div> 
                 </div>
+             
                 
                 <div className="sm:w-1/2 w-4/5 h-1/2 gap-3 mb-5 flex 2xl:flex-row flex-col">
                     <div className="w-full overflow-hidden border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">
-                        <h1 className="w-full text-white font-semibold sm:text-2xl">Powerlifting</h1>
+                        <h1 className="w-full text-white font-semibold sm:text-2xl">Music production</h1>
                         <p className="w-full text-white text-opacity-50">One of my recent hobbies.</p>
-                        <div className="w-full h-full p-5 flex justify-center overflow-hidden items-center ">
-                            <img  draggable="false" alt="dancing gopher" decoding="async" loading="lazy" src="/gopher.png" className="h-3/5 py-1 " /> {/* 'placeholder' remove this for photos from camera with a filter or sum to make it dark */}
+                        <div className="w-full h-full p-5 flex relative justify-center overflow-hidden items-center ">
+                            <Orb />
                         </div> 
                     </div>
-                    <div className="w-full border border-white border-opacity-10 h-80 2xl:h-full p-5 bg-black flex flex-col rounded-xl items-center">
+                    <div className="w-full border  border-white border-opacity-10 h-80 2xl:h-full overflow-hidden p-5 bg-black flex flex-col rounded-xl items-center">
                         <h1 className="w-full text-white font-semibold sm:text-2xl">Software</h1>
                         <p className="w-full text-white text-opacity-50">In my free time, I enjoy building things to solve problems and automate my life.</p>
-                        <Lines />
+                        
+                        <MagnetLines rows={8} columns={9} containerSize="100%" lineColor="white" lineWidth="0.2vmin" lineHeight="3vmin" baseAngle={0} style={{ marginTop: "1.25rem" , paddingBottom:"1.25rem", opacity:"80%"}}/>
                     </div>
                 </div>
             </div>
