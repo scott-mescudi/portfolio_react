@@ -15,7 +15,7 @@ interface Project {
 function ProjectCard({ item }: { item: Project }) {
     return(
         <>
-            <div className="w-[full] h-[50dvh] relative shadow-inner-xl shadow-neutral-950 overflow-hidden rounded-xl">
+            <div className="w-[full] h-[50vh] relative shadow-inner-xl shadow-neutral-950 overflow-hidden rounded-xl">
                 <div className="absolute w-full h-full -z-10">
                     <Image className="h-full w-full object-cover" src={item.image} alt="stegano" />
                 </div>
