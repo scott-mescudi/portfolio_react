@@ -73,7 +73,7 @@ const MagnetLines: React.FC<MagnetLinesProps> = ({
         backgroundColor: lineColor,
         width: lineWidth,
         height: lineHeight,
-        //@ts-expect-error
+        //@ts-expect-error CSS custom property type not recognized by TypeScript
         "--rotate": `${baseAngle}deg`,
         transform: "rotate(var(--rotate))",
         willChange: "transform",
