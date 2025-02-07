@@ -1,10 +1,12 @@
 import Link from "next/link";
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
+import Timme  from '../../../public/portfolio/timme.png'
+import Stegano from '../../../public/portfolio/stegano.svg'
 
 interface Project {
     title: string
     description: string
-    image: string
+    image: StaticImageData
     url: string
     tags: string[],
  
@@ -13,44 +15,34 @@ interface Project {
 function ProjectCard({ item }: { item: Project }) {
     return(
         <>
-        <div className="w-full  relative grid grid-cols-1 aspect-video border border-white group border-opacity-10 bg-black rounded-xl overflow-hidden ">
-            <div className="absolute W">
-                <Image className="object-cover" src={item.image} width={1920} height={1080} alt={item.title} />
-            </div>
-            
-            <div className="w-full mt-auto will-change-transform bg-black group group-hover:bg-opacity-80 duration-300 ease-in-out bg-opacity-50 backdrop-blur-md">
-                <div className="w-full h-full px-5 py-3 flex flex-col ">
-                    <div className="flex flex-row gap-5">
-                        <h1 className="text-white text-sm text-opacity-80 duration-300 ease-in-out delay-200 group-hover:text-opacity-100 font-bold sm:text-3xl">{item.title}</h1>
-                        <div className="flex flex-row gap-3 items-start">
-                            {item.tags.map((item:string, idx:number) => (
-                                <Image key={idx} alt={item} width={50} height={50} className="xl:size-10 size-5" src={item} />
-                            ))}
-                        </div>
+            <div className="w-[full] h-[50dvh] relative shadow-inner-xl shadow-neutral-950 overflow-hidden rounded-xl">
+                <div className="absolute w-full h-full -z-10">
+                    <Image className="h-full w-full object-cover" src={item.image} alt="stegano" />
+                </div>
+                <div className="w-full flex h-full ">
+                    <div className="w-full mt-auto bg-gradient-to-t from-neutral-950 sm:p-10 p-5">
+                        <p className="text-white h-1/4 font-bold text-3xl">{item.title}</p>
+                        <p className="text-white h-3/4 text-opacity-50 text-clamp-2">{item.description}</p>
                     </div>
-                    <p className="text-white duration-300 ease-in-out delay-200 group-hover:text-opacity-50 text-opacity-30 xl:text-lg text-xs truncate text-ellipsis">{item.description}</p>
                 </div>
             </div>
-        </div>
         </>
     )
 }
-
-
 
 export default function Projects() {
     const projects:Project[] = [
         { 
             title: "Stegano", 
             description: "The fastest steganography library for Go.", 
-            image: "/portfolio/stegano.svg", 
+            image: Stegano, 
             url: "https://github.com/scott-mescudi/stegano",
             tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"]
         },
         { 
             title: "Photography showcase", 
             description: "A website created for a photographer to showcase his personal work.", 
-            image: "/portfolio/timme.png", 
+            image: Timme, 
             url: "https://timme-delta.vercel.app/",
             tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg", "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"]
         },
@@ -60,7 +52,7 @@ export default function Projects() {
     return (
         <>
         <div id="projects" className="min-h-screen my-5 w-full  flex items-center flex-col">
-            <div className="flex flex-col mt-7 sm:w-1/2 w-4/5 gap-5">
+            <div className="lg:grid grid-cols-2 mt-7 flex flex-col h-full sm:w-1/2 w-4/5 gap-5">
                 {projects.map((item:Project, idx:number) => (
                     <Link key={idx} href={item.url} target="_blank">
                         <ProjectCard item={item} />                   
