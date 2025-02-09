@@ -34,7 +34,7 @@ export default function Projects() {
     const projects:Project[] = [
         { 
             title: "Stegano", 
-            description: "The fastest steganography library for Go.", 
+            description: "The fastest and most efficient steganography library available for Go.", 
             image: Stegano, 
             url: "https://github.com/scott-mescudi/stegano",
             tags: ["https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg"]
