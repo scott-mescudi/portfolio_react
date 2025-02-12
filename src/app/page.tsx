@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 
-
-
 export default function Home() {
+
+
     return (  
-        <div className="min-h-screen w-full over flex flex-col items-center ">
-            <div id="info" className="sm:w-1/2 w-4/5 border border-white border-opacity-10 overflow-hidden rounded-xl bg-black px-6 text-white gill flex flex-row py-4 my-5">
+        <div className="min-h-screen w-full flex flex-col items-center gap-5 ">
+            <div id="info" className="sm:w-1/2 w-4/5 border border-white border-opacity-10 overflow-hidden rounded-xl bg-black px-6 text-white gill flex flex-row py-4">
                 <div id="text" className="w-full h-full">
                     <h1 className="sm:text-5xl text-4xl font-bold">Hey, I&apos;m Jay</h1>
                     <p className="text-white text-opacity-50 text-2xl mt-2">Rotterdam, Netherlands</p>
