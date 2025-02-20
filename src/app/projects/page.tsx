@@ -3,6 +3,8 @@ import Image, { StaticImageData } from 'next/image'
 import Timme  from '../../../public/portfolio/timme.png'
 import Stegano from '../../../public/portfolio/stegano.svg'
 
+import "./project.css"
+
 interface Project {
     title: string
     description: string
@@ -15,12 +17,12 @@ interface Project {
 function ProjectCard({ item }: { item: Project }) {
     return(
         <>
-            <div className="w-[full] h-[50vh] group relative shadow-inner-xl shadow-neutral-950 overflow-hidden rounded-xl">
+            <div className="w-[full] h-[50vh] group relative shadow-inset overflow-hidden rounded-xl">
                 <div className="absolute w-full h-full -z-10">
                     <Image className="h-full group-hover:opacity-50 duration-300 ease-in-out w-full object-cover" src={item.image} alt="stegano" />
                 </div>
                 <div className="w-full flex h-full ">
-                    <div className="w-full mt-auto bg-gradient-to-t from-neutral-950 sm:p-10 p-5">
+                    <div className="w-full mt-auto bg-gradient-to-t from-[#050505] sm:p-10 p-5">
                         <p className="text-white h-1/4 font-bold text-3xl">{item.title}</p>
                         <p className="text-white h-3/4 text-opacity-50 text-clamp-2">{item.description}</p>
                     </div>
