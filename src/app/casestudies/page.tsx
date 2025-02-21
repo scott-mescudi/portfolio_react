@@ -146,7 +146,11 @@ const SteganoCaseStudy = () => {
   return (
     <>
       <div className="w-full flex flex-col items-center">
-        <Link className="h-fit w-full" target="_blank" href={"https://github.com/scott-mescudi/stegano"}>
+        <Link
+          className="h-fit w-full"
+          target="_blank"
+          href={"https://github.com/scott-mescudi/stegano"}
+        >
           <div className="relative bg-neutral-950 overflow-hidden rounded-t-lg w-full h-[25vh]">
             <Image
               className="absolute z-10 -top-40"
@@ -588,10 +592,10 @@ const SteganoCaseStudy = () => {
             Building Stegano has been an incredibly rewarding experience. I went
             from having zero knowledge of steganography to developing one of the
             fastest, most feature-complete steganography libraries in Golang. If
-            you're looking for a high-performance, modern steganography library
-            for hiding data in images and audio, check out Stegano. It’s built
-            for speed, reliability, and ease of use—and I’m excited to see how
-            others use it!
+            you&aposre looking for a high-performance, modern steganography
+            library for hiding data in images and audio, check out Stegano. It’s
+            built for speed, reliability, and ease of use—and I’m excited to see
+            how others use it!
           </p>
         </div>
       </div>
