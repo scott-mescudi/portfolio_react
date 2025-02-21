@@ -9,6 +9,10 @@ body {
     background-color: black;
 }
 
+.shadow-inset {
+  box-shadow: inset 7px 7px 13px #050505, inset -7px -7px 13px #050505;
+}
+
 body::-webkit-scrollbar {
     width: 0.5em; 
     height: 0.5em; 

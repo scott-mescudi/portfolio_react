@@ -22,7 +22,7 @@ export function TechGrid({tech = DefaultTech, name = "Technologies i use" }) {
             `}
         </style>
 
-        <div id="stack" className="sm:w-1/2 border border-white border-opacity-10 py-5 w-4/5 flex flex-col my-5 items-center rounded-xl bg-black gap-4 overflow-y-auto">
+        <div id="stack" className="sm:w-1/2 border border-white border-opacity-10 py-5 w-4/5 flex flex-col items-center rounded-xl bg-black gap-4 overflow-y-auto">
             <h1 className="text-white w-full text-center gill font-semibold sm:text-3xl">{name}</h1>
             
             <div className="relative h-full w-full items-center overflow-hidden pb-3 py-2 lg:grid grid-cols-2 flex flex-col  px-9 gap-6">

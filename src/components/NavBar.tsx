@@ -13,7 +13,7 @@ export function NavBar() {
     const NavItems: NavItem[] = [
         {name: "Home", Path: "/"},
         {name: "About", Path: "/about"},
-        {name: "Projects", Path: "/projects"},
+        {name: "Casestudies", Path: "/casestudies"},
     ]
 
     const [time, SetTime] = useState("");
