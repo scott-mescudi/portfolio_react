@@ -32,3 +32,13 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar:horizontal {
     display: none;
 }
+
+code {
+	background: transparent !important;
+	padding: none !important;
+	margin: none !important;
+}
+
+pre {
+	padding-top: 0 !important;
+}
