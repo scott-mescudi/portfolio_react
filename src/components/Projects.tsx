@@ -8,6 +8,7 @@ interface Project {
   description: string;
   image: StaticImageData;
   url: string;
+  target: string
   tags: string[];
 }
 
@@ -42,7 +43,8 @@ export function Projects() {
       description:
         "The fastest and most efficient steganography library available for Go.",
       image: Stegano,
-      url: "https://github.com/scott-mescudi/stegano",
+      url: "/casestudies/stegano",
+      target: "",
       tags: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
       ],
@@ -53,6 +55,7 @@ export function Projects() {
         "A website created for a photographer to showcase his personal work.",
       image: Timme,
       url: "https://timme-delta.vercel.app/",
+      target: "_blank",
       tags: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
@@ -69,7 +72,7 @@ export function Projects() {
       >
         <div className="lg:grid grid-cols-2 flex flex-col h-full sm:w-1/2 w-4/5 gap-5">
           {projects.map((item: Project, idx: number) => (
-            <Link key={idx} href={item.url} target="_blank">
+            <Link key={idx} href={item.url} target={item.target}>
               <ProjectCard item={item} />
             </Link>
           ))}
