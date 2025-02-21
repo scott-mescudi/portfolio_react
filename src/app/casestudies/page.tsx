@@ -1,6 +1,7 @@
 import { CodeBox } from "@/components/CodeBlock";
 import stegano from "@/public/portfolio/stegano.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const rssEncode = `
 func RsEncode(data []byte, parity int) ([]byte, error) {
@@ -145,13 +146,15 @@ const SteganoCaseStudy = () => {
   return (
     <>
       <div className="w-full flex flex-col items-center">
-        <div className="relative bg-red-600 overflow-hidden rounded-t-lg w-full h-[25vh]">
-          <Image
-            className="absolute z-10"
-            src={stegano}
-            alt="stegano github photo"
-          />
-        </div>
+        <Link className="h-fit w-full" target="_blank" href={"https://github.com/scott-mescudi/stegano"}>
+          <div className="relative bg-neutral-950 overflow-hidden rounded-t-lg w-full h-[25vh]">
+            <Image
+              className="absolute z-10 -top-40"
+              src={stegano}
+              alt="stegano github photo"
+            />
+          </div>
+        </Link>
         <div className="w-full p-8 overflow-hidden rounded-b-lg mb-5 bg-[#050505] ">
           <p className="text-white text-[clamp(1rem,2.25vw,4rem)] font-bold antialiased">
             Stegano: The Fastest Steganography Library Built in Go
