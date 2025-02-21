@@ -43,7 +43,7 @@ export function Projects() {
       description:
         "The fastest and most efficient steganography library available for Go.",
       image: Stegano,
-      url: "/casestudies/stegano",
+      url: "/casestudies",
       target: "",
       tags: [
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg",
@@ -68,7 +68,7 @@ export function Projects() {
     <>
       <div
         id="projects"
-        className="min-h-screen  w-full  flex items-center flex-col"
+        className="mb-10 w-full  flex items-center flex-col"
       >
         <div className="lg:grid grid-cols-2 flex flex-col h-full sm:w-1/2 w-4/5 gap-5">
           {projects.map((item: Project, idx: number) => (
